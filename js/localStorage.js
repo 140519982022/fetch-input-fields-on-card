@@ -45,8 +45,6 @@ function getData() {
     result.innerHTML = item;
 }
 
-
-
 function removedItem(index) {
     var userDetails = JSON.parse(localStorage.getItem('userDetails')) ?? [];
     userDetails.splice(index,1);
