@@ -1,0 +1,80 @@
+
+body{
+    background-color: black;
+    border-color: aqua;
+}
+.outerDiv{
+    width: 1200px;
+    /* border: 2px solid black; */
+    /* color: rgb(124, 241, 241); */
+
+    margin: auto;
+    height: auto;
+
+    padding: 5% 5%;
+
+}
+
+.container{
+    width: 300px;
+    height: auto;
+    border: 2px solid rgb(9, 160, 235);
+    box-shadow: 1px 1px 10px rgb(9, 160, 235);
+    margin: auto;
+
+    padding: 2% 2%;
+}
+
+input[type="text"],input[type="number"]{
+    width: 200px;
+    height: 25px;
+    background-color: transparent;
+    margin-top: 3%;
+    color: aqua;
+    
+}
+
+input::placeholder{
+    color: rgb(124, 241, 241)
+
+}
+
+.cardsection{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.card{
+
+    margin: 3%;
+    width: 215px;
+    /* height: 120px; */
+    height: auto;
+    /* border: 2px solid black; */
+    box-shadow: 1px 1px 20px rgb(59, 220, 245);
+    background-color: rgb(91, 199, 241);
+    padding: 1% 0% 0% 1% ;
+    color: black;
+
+
+}
+
+span{
+    padding: 1% 3% 0px 0%;
+    /* border: 2px solid black; */
+    font-size: 30px;
+    right: 0px;
+    float: right;
+}
+
+
+label{
+    color: aquamarine;
+}
+
+button{
+    background-color: rgb(9, 160, 235);
+    padding: 2% 5%;
+    box-shadow: 1px 1px 15px rgb(9, 160, 235);
+
+}
