@@ -1,46 +1,75 @@
-var userDetails = [] ;
+callMe();
+var result = 0;
 
-var result = document.querySelector(".cardsection");
+function countDownTimer() {
+    // var getEndDate = document.getElementById('endDate').innerText;
 
-var fromData = document.querySelector('form');
+    var showLastDate = 0;
+    var dynamicEndDate = document.getElementById('selectDate').value;
+    // console.log(dynamicEndDate);
 
-fromData.addEventListener("submit", (data) => {
-    // alert("hiiii");
-    data.preventDefault();
-    var userNAme = data.target.name.value;
-    var userAge = data.target.age.value;
+    if (dynamicEndDate != "") {
 
-    var meargeData = {
-        'name' : userNAme,
-        'age' : userAge
+        showLastDate = dynamicEndDate + " " + "00:00:00";
+        document.getElementById('finalDate').innerText = showLastDate;
+        
+    }
+    
+    getEndDate = new Date(showLastDate);
+    // document.getElementById('endDate').innerText = getEndDate;
+
+    var currentDate = new Date();
+    var differance = getEndDate - currentDate;
+
+    var oneSecond = 1000;
+    var oneMinute = oneSecond * 60;
+    var oneHour = oneMinute * 60;
+    var oneDay = oneHour * 24;
+    var oneMonth = oneDay * 30.45;
+    var oneYear = oneMonth * 12;
+    // var oneYear = oneDay * 365;
+
+    var years = Math.floor(differance / oneYear);
+    var months = Math.floor((differance % oneYear) / oneMonth);
+    var days = Math.floor((differance % oneMonth) / oneDay);
+    var hours = Math.floor((differance % oneDay) / oneHour);
+    var minutes = Math.floor((differance % oneHour) / oneMinute);
+    var seconds = Math.floor((differance % oneMinute) / oneSecond);
+
+    // if (years < 0) {
+    //     years = 0;
+    // }
+
+    // if (months < 0) {
+    //     months = 0;
+    // }
+
+    if (days < 0) {
+        days = 0;
     }
 
-    userDetails.push(meargeData);
-    data.target.reset();
-    getData();
-})
+    if (hours < 0) {
+        hours = 0;
+    }
 
+    if (minutes < 0) {
+        minutes = 0;
+    }
 
-function getData() {
-    var item = '';
-    userDetails.forEach((v,i) => {
-
-        item += `<div class="card">
-        <span onclick="removedItem(${i})"><b>&times;</b></span>
-        <b>Name :</b>
-        <p> ${v.name}</p>
-        <b>Age :</b>
-        <p>${v.age}</p>
-    </div>`;
-
-    })
+    if (seconds < 0) {
+        seconds = 0;
+    }
     
-    result.innerHTML = item;
+    document.getElementById('seconds').innerText = seconds;
+    document.getElementById('minutes').innerText = minutes;
+    document.getElementById('hours').innerText = hours;
+    document.getElementById('days').innerText = days;
+    // document.getElementById('month').innerText = months;
+    // document.getElementById('year').innerText = years;
 }
 
-function removedItem(index) {
-    userDetails.splice(index,1);
-
-    getData();
+function callMe() {
+    setInterval(countDownTimer,1000);
     
 }
+

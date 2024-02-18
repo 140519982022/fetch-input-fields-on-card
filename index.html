@@ -3,31 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tremprary fetch inserted record </title>
+    <title>countdown timer</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="outerDiv">
-        <div class="container">
-            <form action="">
-                <div>
-                    <label for="">Name : </label>&nbsp;&nbsp;
-                    <input type="text" autofocus name="name" placeholder="&nbsp;&nbsp;&nbsp;please enter your name">
-                </div>
+
+    <div class="">
+        <div class="main" >
+            <input type="date" name="" id="selectDate"><br><br>
+            <!-- <h2 id="endDate">2024-02-17 00:00:00</h2> -->
+            <h1 id="finalDate"></h1>
+            <div class="optionalImages">
+                
+                <!-- <div class="quantity" id="year" onclick="addProduct()"></div>
+                <div class="quantity" id="month"></div> -->
+                <div class="quantity" id="days" onclick="removeProduct()"></div>
     
-                <div>
-                    <label for="">Age :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
-                    <input type="number" name="age" placeholder="&nbsp;&nbsp;&nbsp;please enter your age">
-                </div><br><br>
-                <button onclick="getData()">Save</button>
-            </form>
+                <div class="quantity" id="hours" onclick="addProduct()"></div>
+                <div class="quantity" id="minutes"></div>
+                <div class="quantity" id="seconds" onclick="removeProduct()"></div>
+    
+            </div>
+            <div class="optionalImages">
+                <!-- <div class="imText">year </div>
+                <div class="imText">months </div> -->
+                <div class="imText">days </div>
+
+                <div class="imText">&nbsp;&nbsp; hours </div>
+                <div class="imText">&nbsp;&nbsp;min </div>
+                <div class="imText">&nbsp;&nbsp;&nbsp;  sec </div>
+
+            </div>
         </div>
-
-        <div class="cardsection">
-
-
-        </div>
-
     </div>
 </body>
 <script src="js/custom.js"></script>
