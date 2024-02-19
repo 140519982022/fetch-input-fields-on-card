@@ -20,7 +20,6 @@ fromData.addEventListener("submit", (data) => {
     getData();
 })
 
-
 function getData() {
     var item = '';
     userDetails.forEach((v,i) => {
